@@ -1,39 +1,11 @@
-# ScrollViewWithScrollOffset
+//
+//  ContentView.swift
+//  Examples
+//
+//  Created by Yanis Plumit on 11.11.2022.
+//
 
-SwiftUI ScrollView with content offset.
-
-<table>
-<tr>
-<td><img src="Examples/demo1.gif"/></td>
-</tr>
-</table>
-
-## Features
-- easiest way to get `contentOffset` of ScrollView
-
-# Installing
-Swift Package Manager:
-```
-https://github.com/Jnis/ScrollViewWithScrollOffset.git
-```
-
-# Usage
-
-1) Usage
-
-``` swift
-import ScrollViewWithScrollOffset
-
-@State var scrollOffset: CGFloat = 0 // 1
-
-ScrollViewWithScrollOffset(scrollOffset: $scrollOffset, content: { // 2
-   // your view ...
-})
-```
-
-2) Example with image (gif example):
-
-``` swift
+import SwiftUI
 import ScrollViewWithScrollOffset
 
 struct ContentView: View {
@@ -61,9 +33,9 @@ struct ContentView: View {
         .aspectRatio(CGSize(width: 375, height: 280), contentMode: .fit)
     }
 }
-```
 
-You can find more examples inside `/Examples` folder.
-
-# License 
-MIT
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
